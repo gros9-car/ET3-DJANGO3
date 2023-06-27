@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <title>Document</title>
+    {%load bootstrap5%}
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <form id="miFormulario" class="was-validated"></form>
+            <form id="miFormulario" class="was-validated" novalidate>
+                <form action="" method="">
+                    <fieldset>
+                        <legend>Creacion de Cuenta</legend>
+                            <form id="miFormulario">
+                                <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Porfavor, ingrese nombre" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contrasenna">Contraseña:</label>
+                                    <input type="text" class="form-control" id="contrasenna" name="contrasenna" placeholder="Porfavor, ingrese contrasenna" required>
+                                </div>
+                                <div class="form-group">
+                                <label for="email">Email:</label>
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Porfavor, ingrese email" required>
+                                </div>
+                                <div class="form-group col-sm-4 mb-3">
+                                    <label>Genero</label><br>
+                                    <input type="radio" name="optRadio" id="optRadio" value="Masculino">
+                                    <label for="optRadio">Masculino</label><br>
+                                    <input type="radio" name="optRadio" id="optRadio" value="Masculino">
+                                    <label for="optRadio">Femenino</label><br>
+                                    <input type="radio" name="optRadio" id="optRadio" value="Femenino">
+                                    <label for="optRadio">Otro</label><br>
+                                </div>
+                                <div class="form-group">
+                                <label for="descripcion">Descripcion:</label>
+                                <textarea class="form-control" id="descripcion" name="descripcion" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Crear</button>
+                            </form>
+                    </fieldset>
+                </form>    
+        </div>
+      </div>
+
+</body>
+</html>
+  

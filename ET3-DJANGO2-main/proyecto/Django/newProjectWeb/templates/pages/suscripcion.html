@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {%load bootstrap5%}
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+
+    <title>Document</title>
+</head>
+<body>
+    <h1>SUSCRIPCION</h1>
+
+    <form class="row g-3 needs-validation" novalidate>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip01" class="form-label">Nombre</label>
+          <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+          <div class="valid-tooltip">
+            Nice!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltip02" class="form-label">Apellido</label>
+          <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+          <div class="valid-tooltip">
+            Nice!
+          </div>
+        </div>
+        <div class="col-md-4 position-relative">
+          <label for="validationTooltipUsername" class="form-label">Usuario</label>
+          <div class="input-group has-validation">
+            <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+            <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend" required>
+            <div class="invalid-tooltip">
+              Este usuario ya está usado. Por favor, vuelva a intentarlo
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 position-relative">
+          <label for="validationTooltip03" class="form-label">País</label>
+          <input type="text" class="form-control" id="validationTooltip03" required>
+          <div class="invalid-tooltip">
+            Por favor, ingrese una ciudad válida.
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip04" class="form-label">Ciudad</label>
+          <select class="form-select" id="validationTooltip04" required>
+            <option selected disabled value="">Ciudad</option>
+            <option>Iquique tierra de nadie</option>
+            <option>Talca, la que embarra todo</option>
+            <option>Coquimbo, tierra de funados</option>
+            <option>La Serena</option>
+            <option>Valparaíso, ciudad de la orina</option>
+            <option>Santiago tóxico y enfermante</option>
+
+          </select>
+          <div class="invalid-tooltip">
+            Por favor, seleccione una ciudad válida. 
+          </div>
+        </div>
+        <div class="col-md-3 position-relative">
+          <label for="validationTooltip05" class="form-label">Postal</label>
+          <input type="text" class="form-control" id="validationTooltip05" required>
+          <div class="invalid-tooltip">
+            Por favor, ingrese un código postal válido. 
+          </div>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Crear</button>
+        </div>
+      </form>
+
+
+</body>
+</html>
