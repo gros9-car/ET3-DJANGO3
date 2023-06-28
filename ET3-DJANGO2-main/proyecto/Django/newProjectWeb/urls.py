@@ -9,5 +9,11 @@ urlpatterns = [
     path('form1', views.form1, name='form1'),
     path('plants', views.plants, name='plants'),
     path('suscripcion', views.suscripcion, name='suscripcion'),
+    path('listProducto', views.listProducto, name='listProducto'),
+    path('crud', views.crud, name='crud'),
+    path('addProducto', views.addProducto, name='addProducto'),
+    path('delProducto/<str:pk>', views.delProducto, name='delProducto'),
+    path('retModProducto/<str:pk>', views.retModProducto, name ="retModProducto"),
+    path('updProducto', views.updProducto, name="updProducto"),
 
 ]

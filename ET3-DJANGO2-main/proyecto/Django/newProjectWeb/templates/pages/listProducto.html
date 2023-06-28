@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load bootstrap5%}
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+</head>
+<body>
+    <h1>Productos</h1>
+    <br>
+
+    <button>
+        <a href="{% url 'addProducto' %}">Agregar</a>
+    </button>
+    <div id="msg">
+        {% if mensaje %}
+            {{mensaje}}
+        {% endif %}
+    </div>
+    <table>
+        {% if clientes %}
+            <th>Id Producto</th>
+            <th>Nombre Producto</th>
+            <th>Stock Producto</th>
+            <th>Precio</th>
+            <th>Estado</th>
+            <th>Eliminar</th>
+            <th>Modificar</th>
+            {% for x in productos %}
+                <tr>
+                    <td> {{x.idPoducto}}
+                    <td> {{x.nombreProducto}}
+                    <td> {{x.cantidad}}
+                    <td> {{x.precio}}
+                    <td> {{x.estadoProducto}}
+                    <td> <a href="{% url 'delProducto' pk=x.idPoducto %}">Eliminar</a>
+                    <td> <a href="{% url 'retModProducto' pk=x.idPoducto %}">Modificar</a>
+                </tr>
+            {% endfor %}
+        {% endif %}
+    </table>
+    <script>
+        $(document).ready(function(){
+            $('#msg').delay(2000).fadeOut("slow");
+        })
+    </script>
+</body>
+</html>
