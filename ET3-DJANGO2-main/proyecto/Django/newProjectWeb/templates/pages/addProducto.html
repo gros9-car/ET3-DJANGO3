@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {%load bootstrap5%}
+    {%bootstrap_css%}
+    {%bootstrap_javascript%}
+</head>
+<body>
+    <div>
+        <h1>Agregar producto</h1>
+        <form action="addProducto" method="POST">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="id">Id producto:</label>
+                <input type="text" id="id" name="id" required>
+            </div>
+            <div class="form-group">
+                <label for="nombre">Nombre producto:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            <div class="form-group">
+                <label for="cantidad">Cantidad:</label>
+                <input type="text" id="cantidad" name="cantidad" required>
+            </div>
+            <div class="form-group">
+                <label for="precio">Precio producto:</label>
+                <input type="text" id="precio" name="precio" required>
+            </div>
+            <div class="form-group">
+                <label for="estado">Estado producto:</label>
+                <input type="text" id="estado" name="estado" required>
+            </div>
+
+            <input type="submit" name="add" value="Agregar">
+        </form>
+        <a href="{% url 'crud' %}">Atrás</a>
+        <div id="msg">
+            {% if mensaje %}
+            {{mensaje}}
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
