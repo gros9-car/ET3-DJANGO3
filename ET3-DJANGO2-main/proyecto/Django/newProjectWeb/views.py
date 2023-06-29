@@ -93,3 +93,37 @@ def updProducto (request):
         productos = Producto.objects.all()
         context = {'producto':producto}
         return render(request,'pages/listProducto.html', context)
+
+
+
+def formAdd(request):
+    if request.method is not "POST":
+        return render(request, 'pages/form1.html', context)
+    else:
+        rut = request.POST["rut"]
+        nombre = request.POST["nombre"]
+        appPaterno = request.POST["apellido paterno"]
+        appMaterno = request.POST["apellido materno"]
+        fechaNacimiento = request.POST["fecha nacimiento"]
+        correo = request.POST["correo"]
+        telefono = request.POST["telefono"]
+
+        obj = Usuario.objects.create(
+            rut = rut,
+            nombre = nombre,
+            appPaterno = appPaterno,
+            appMaterno = appMaterno,
+            fechaNacimiento = fechaNacimiento,
+            correo = correo,
+            telefono = telefono
+        )
+        obj.save()
+        context = {'mensaje':"Usuario añadido"}
+        return render (request, 'pages/form1.html', context)
+
+#userAdd
+#userList
+#userEdit
+#login
+#logout
+
